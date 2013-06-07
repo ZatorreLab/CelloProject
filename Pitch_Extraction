@@ -1,6 +1,10 @@
 #! /bin/bash
 
+# This is where all of the wav files to be analysed were stored
 cd ~/Desktop/Audio
+
+#will go through all wav files in the directory and extract pitch
+
 for f in `ls *.wav`; do 
 
 aubiopitch -i $f -H 500 -M 260 -l 100 -m yin > $f.txt
